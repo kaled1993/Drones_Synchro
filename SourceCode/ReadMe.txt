@@ -1,6 +1,6 @@
 Projet Livraison par drones 
 
-Réalisé par Bissari Déromba Serge et Krifa Khaled
+Réalisé par Krifa Khaled
 
 Le projet ce compose de  6 fichiers :
 
