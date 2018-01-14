@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><pnml>
+<net id="Net-One" type="P/T net">
+<token id="Default" enabled="true" red="0" green="0" blue="0"/>
+<place id="Demande">
+<graphics>
+<position x="465.0" y="45.0"/>
+</graphics>
+<name>
+<value>Demande</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Drone disponible">
+<graphics>
+<position x="990.0" y="390.0"/>
+</graphics>
+<name>
+<value>Drone disponible</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Expédition exécutée">
+<graphics>
+<position x="90.0" y="555.0"/>
+</graphics>
+<name>
+<value>Expédition exécutée</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Expédition programmée">
+<graphics>
+<position x="570.0" y="135.0"/>
+</graphics>
+<name>
+<value>Expédition programmée</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Slot disponible">
+<graphics>
+<position x="90.0" y="135.0"/>
+</graphics>
+<name>
+<value>Slot disponible</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Slot occupé pour livraison">
+<graphics>
+<position x="225.0" y="255.0"/>
+</graphics>
+<name>
+<value>Slot occupé pour livraison</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Slot occupé pour récupération">
+<graphics>
+<position x="585.0" y="600.0"/>
+</graphics>
+<name>
+<value>Slot occupé pour récupération</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Type livraison">
+<graphics>
+<position x="465.0" y="255.0"/>
+</graphics>
+<name>
+<value>Type livraison</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Type récupération">
+<graphics>
+<position x="855.0" y="315.0"/>
+</graphics>
+<name>
+<value>Type récupération</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<transition id="T1">
+<graphics>
+<position x="750.0" y="45.0"/>
+</graphics>
+<name>
+<value>T1</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="T2">
+<graphics>
+<position x="570.0" y="270.0"/>
+</graphics>
+<name>
+<value>T2</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="T3">
+<graphics>
+<position x="330.0" y="135.0"/>
+</graphics>
+<name>
+<value>T3</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="T5">
+<graphics>
+<position x="435.0" y="540.0"/>
+</graphics>
+<name>
+<value>T5</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="T6">
+<graphics>
+<position x="600.0" y="390.0"/>
+</graphics>
+<name>
+<value>T6</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="T7">
+<graphics>
+<position x="90.0" y="360.0"/>
+</graphics>
+<name>
+<value>T7</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="T8">
+<graphics>
+<position x="810.0" y="585.0"/>
+</graphics>
+<name>
+<value>T8</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<arc id="Demande to T1" source="Demande" target="T1">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="491" y="56" curvePoint="false"/>
+<arcpath id="001" x="757" y="52" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Drone disponible to T1" source="Drone disponible" target="T1">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="993" y="389" curvePoint="false"/>
+<arcpath id="001" x="766" y="57" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Expédition exécutée to T5" source="Expédition exécutée" target="T5">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="116" y="566" curvePoint="false"/>
+<arcpath id="001" x="441" y="557" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Expédition exécutée to T6" source="Expédition exécutée" target="T6">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="116" y="562" curvePoint="false"/>
+<arcpath id="001" x="606" y="407" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Expédition programmée to T2" source="Expédition programmée" target="T2">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="582" y="161" curvePoint="false"/>
+<arcpath id="001" x="582" y="267" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Expédition programmée to T3" source="Expédition programmée" target="T3">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="567" y="146" curvePoint="false"/>
+<arcpath id="001" x="347" y="139" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Slot disponible to T3" source="Slot disponible" target="T3">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="116" y="146" curvePoint="false"/>
+<arcpath id="001" x="337" y="142" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Slot disponible to T5" source="Slot disponible" target="T5">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="111" y="158" curvePoint="false"/>
+<arcpath id="001" x="442" y="547" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Slot occupé pour livraison to T7" source="Slot occupé pour livraison" target="T7">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="225" y="276" curvePoint="false"/>
+<arcpath id="001" x="106" y="372" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Slot occupé pour récupération to T8" source="Slot occupé pour récupération" target="T8">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="611" y="611" curvePoint="false"/>
+<arcpath id="001" x="816" y="602" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T1 to Expédition programmée" source="T1" target="Expédition programmée">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="756" y="62" curvePoint="false"/>
+<arcpath id="001" x="595" y="140" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T2 to Expédition exécutée" source="T2" target="Expédition exécutée">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="576" y="282" curvePoint="false"/>
+<arcpath id="001" x="114" y="559" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T2 to Type récupération" source="T2" target="Type récupération">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="587" y="277" curvePoint="false"/>
+<arcpath id="001" x="707" y="276" curvePoint="false"/>
+<arcpath id="002" x="852" y="322" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T3 to Slot occupé pour livraison" source="T3" target="Slot occupé pour livraison">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="336" y="152" curvePoint="false"/>
+<arcpath id="001" x="246" y="255" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T3 to Type livraison" source="T3" target="Type livraison">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="346" y="153" curvePoint="false"/>
+<arcpath id="001" x="393" y="219" curvePoint="false"/>
+<arcpath id="002" x="463" y="259" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T5 to Slot occupé pour récupération" source="T5" target="Slot occupé pour récupération">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="451" y="558" curvePoint="false"/>
+<arcpath id="001" x="582" y="606" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T5 to Type récupération" source="T5" target="Type récupération">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="452" y="544" curvePoint="false"/>
+<arcpath id="001" x="853" y="333" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T6 to Drone disponible" source="T6" target="Drone disponible">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="616" y="402" curvePoint="false"/>
+<arcpath id="001" x="987" y="402" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T6 to Type livraison" source="T6" target="Type livraison">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="612" y="387" curvePoint="false"/>
+<arcpath id="001" x="567" y="323" curvePoint="false"/>
+<arcpath id="002" x="489" y="274" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T7 to Expédition exécutée" source="T7" target="Expédition exécutée">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="102" y="387" curvePoint="false"/>
+<arcpath id="001" x="102" y="552" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T7 to Slot disponible" source="T7" target="Slot disponible">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="102" y="357" curvePoint="false"/>
+<arcpath id="001" x="102" y="161" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T8 to Drone disponible" source="T8" target="Drone disponible">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="826" y="597" curvePoint="false"/>
+<arcpath id="001" x="991" y="413" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T8 to Slot disponible" source="T8" target="Slot disponible">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="817" y="592" curvePoint="false"/>
+<arcpath id="001" x="114" y="154" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Type livraison to T3" source="Type livraison" target="T3">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="468" y="254" curvePoint="false"/>
+<arcpath id="001" x="421" y="186" curvePoint="false"/>
+<arcpath id="002" x="347" y="146" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Type livraison to T6" source="Type livraison" target="T6">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="483" y="280" curvePoint="false"/>
+<arcpath id="001" x="516" y="354" curvePoint="false"/>
+<arcpath id="002" x="607" y="397" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Type récupération to T2" source="Type récupération" target="T2">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="852" y="327" curvePoint="false"/>
+<arcpath id="001" x="686" y="328" curvePoint="false"/>
+<arcpath id="002" x="586" y="287" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Type récupération to T5" source="Type récupération" target="T5">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="856" y="337" curvePoint="false"/>
+<arcpath id="001" x="663" y="538" curvePoint="false"/>
+<arcpath id="002" x="452" y="551" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+</net>
+</pnml>

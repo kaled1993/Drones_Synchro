@@ -1,0 +1,5 @@
+Pour le reseau de pétri on a utilisé l'éditeur/simulateur PIPE :
+	Disponible à l'URL suivante : https://sourceforge.net/projects/pipe2/files/latest/download
+	Après téléchargement et décompression, dans le répertoire du logiciel lancer le fichier "launch.sh" (pour linux) ou launch.bat (pour windows)
+	Dans le menu "File" choisir l'option "Open" puis naviguer jusqu'au fichier "model.xml"
+
